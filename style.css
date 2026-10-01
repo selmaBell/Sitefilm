@@ -1,0 +1,147 @@
+
+/* STYLE GENERAL */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* BARRE DE NAVIGATION */
+
+header {
+    background-color: #cb4e5c;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 7%;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 2px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    padding: 12px 18px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: white;
+    color: #cb4e5c;
+}
+
+
+/* BIENVENUE */
+
+.bienvenue {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.bienvenue h1 {
+    color: #cb4e5c;
+    font-size: 42px;
+}
+
+.bienvenue p {
+    font-size: 17px;
+    max-width: 650px;
+    margin: 20px auto 35px;
+    line-height: 1.8;
+}
+
+
+/* SECTIONS */
+
+.section {
+    max-width: 1000px;
+    margin: 30px auto 80px;
+    padding: 45px;
+    background-color: #f8d7da;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+    color: #cb4e5c;
+    font-size: 30px;
+}
+
+.section p {
+    line-height: 1.8;
+}
+
+
+/* BOUTONS */
+
+.bouton {
+    display: inline-block;
+    background-color: #cb4e5c;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.bouton:hover {
+    background-color: #a83648;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #cb4e5c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* ADAPTATION MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bienvenue h1 {
+        font-size: 30px;
+    }
+
+    .section {
+        margin: 20px;
+        padding: 25px;
+    }
+}
