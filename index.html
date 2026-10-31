@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,90 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CinéFilm - Accueil</title>
+<title>CinéFilm - Accueil</title>
 
     <!-- Police -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <!-- MENU -->
     <header>
         <nav class="navbar">
+           <h2 class="logo">CINÉFILM</h2>
+  <ul> 
+     <li><a href="index.html">Accueil</a></li>
+     <li><a href="film.html">Films</a></li>
+     <li><a href="a-propos.html">À propos</a></li>
+  </ul>
 
-            <h2 class="logo">CINÉFILM</h2>
-
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="film.html">Films</a></li>
-                <li><a href="a-propos.html">À propos</a></li>
-            </ul>
-
-        </nav>
+    </nav>
     </header>
-
-
     <main>
 
-        <!-- BIENVENUE -->
-        <section class="bienvenue">
+        <!-- GRANDES BANNIERES -->
+        <section class="hero">
 
-            <h1>Bienvenue sur CinéFilm</h1>
+   <div class="hero-slider">
 
-            <p>
-                Découvrez mon univers cinématographique,
-                une sélection de films et différentes
-                manières d'explorer l'art du cinéma.
-            </p>
+    <article class="hero-slide active">
+        <img src="Images/Breaking bad.jpeg" alt="Bannière Breaking Bad">
+        <div class="hero-overlay">
+            <h1>BREAKING BAD</h1>
+            <a href="film.html" class="bouton">Découvrir</a>
+        </div>
+    </article>
 
-            <a href="film.html" class="bouton">
-                Découvrir les films
-            </a>
+    <article class="hero-slide">
+        <img src="Images/Starwars.jpeg" alt="Bannière Star Wars">
+        <div class="hero-overlay">
+            <h1>STAR WARS</h1>
+            <a href="film.html" class="bouton">Découvrir</a>
+        </div>
+    </article>
+
+    <article class="hero-slide">
+        <img src="Images/Harrypotter.jpeg" alt="Bannière Harry Potter">
+        <div class="hero-overlay">
+            <h1>HARRY POTTER</h1>
+            <a href="film.html" class="bouton">Découvrir</a>
+        </div>
+    </article>
+
+</div>
+            <div class="hero-navigation">
+                <button id="hero-precedent" type="button" aria-label="Bannière précédente">&#10094;</button>
+
+                <div class="hero-points">
+                    <span class="point active"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+
+                <button id="hero-suivant" type="button" aria-label="Bannière suivante">&#10095;</button>
+            </div>
 
         </section>
 
 
-        <!-- PRÉSENTATION -->
-        <section class="section">
+        <!-- FILMS A DECOUVRIR -->
+        <section class="films">
 
-            <h2>À propos de CinéFilm</h2>
+            <div class="titre-films">
+              <h2>Notre sélection pour vous</h2>
 
-            <p>
-                Je m'appelle Belladjou Selma
-                et je suis étudiante en Master 1
-                Humanités numériques.
-            </p>
+            <div class="fleches">
+            </div>
+            </div>
 
-            <p>
-                À travers CinéFilm, je souhaite
-                créer un site consacré au cinéma,
-                permettant de découvrir et
-                d'explorer différents films.
-            </p>
+            <div class="liste-films" id="liste-films">
+                    <article class="carte-film">
+                    <img src="Images/Seven.jpeg" alt="Affiche Seven" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Seven</h3>
+                    </div>
+                </article>
 
-            <a href="a-propos.html" class="bouton">
-                En savoir plus
-            </a>
+                 <article class="carte-film">
+                    <img src="Images/The-last-of-us.jpeg" alt="Affiche The Last of Us" draggable="false">
+                    <div class="overlay-film">
+                        <h3>The Last of Us</h3>
+                    </div>
+                </article>
 
-        </section>
+                <article class="carte-film">
+                    <img src="Images/Interstellar.jpeg" alt="Affiche Interstellar" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Interstellar</h3>
+                    </div>
+                </article>
 
-    </main>
+                  <article class="carte-film">
+                    <img src="Images/Pirates of the Caribbean.jpeg" alt="Affiche Pirates des Caraïbes" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Pirates des Caraïbes</h3>
+                    </div>
+                </article>
 
+                <article class="carte-film">
+                    <img src="Images/Shutter Island poster.jpeg" alt="Affiche Shutter Island" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Shutter Island</h3>
+                    </div>
+                </article>
+
+                <article class="carte-film">
+                    <img src="Images/Figh club.jpeg" alt="Affiche Fight Club" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Fight Club</h3>
+                    </div>
+                </article>
+
+                <article class="carte-film">
+                    <img src="Images/Pulp Fiction.jpeg" alt="Affiche Pulp Fiction" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Pulp Fiction</h3>
+                    </div>
+                </article>
+
+ </div>
+</section>
 
     <!-- FOOTER -->
     <footer>
-
-        <p>
-            © 2026 - CinéFilm
-            | Belladjou Selma
-        </p>
-
+        <p>© 2026 - CinéFilm | Selma Belladjou</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
