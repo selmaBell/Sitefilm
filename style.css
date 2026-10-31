@@ -1,0 +1,837 @@
+/* STYLE GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #180801;
+    color: #f7eee8;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* BARRE DE NAVIGATION */
+
+header {
+    background-color: #1b0c02;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 7%;
+}
+
+
+.logo {
+    color: white;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    display: block;
+    color: #f1e3d8;
+    padding: 12px 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #64463a;
+    color: white;
+}
+
+/* GRANDES BANNIERES */
+
+.hero {
+    padding: 35px 5% 20px;
+}
+
+.hero-slider {
+    position: relative;
+}
+.hero-slide {
+    display: none;
+    position: relative;
+    border: 2px solid #64463a;
+    border-radius: 24px;
+    overflow: hidden;
+    background-color: #2f150a;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+}
+
+.hero-slide.active {
+    display: block;
+}
+
+.hero-slide img {
+    display: block;
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 60px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(
+        to right,
+        rgba(24, 8, 1, 0.94),
+        rgba(47, 21, 10, 0.55),
+        rgba(47, 21, 10, 0.15),
+        transparent
+    );
+}
+
+.hero-overlay h1 {
+    font-size: 65px;
+    line-height: 1.1;
+    max-width: 650px;
+    margin: 0 0 20px;
+    color: white;
+}
+
+.hero-overlay p {
+    font-size: 17px;
+    max-width: 500px;
+    line-height: 1.6;
+    margin: 0 0 12px;
+    color: #f5e7dc;
+}
+
+.hero-overlay .hero-infos {
+    color: #d6b8a5;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.hero-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.hero-navigation button {
+    background-color: #5e250c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-navigation button:hover {
+    background-color: #af5d2e;
+}
+
+.hero-points {
+    display: flex;
+    gap: 10px;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    background-color: #64463a;
+    border-radius: 50%;
+}
+
+.point.active {
+    background-color: #f7eee8;
+}
+
+
+/* FILMS A DECOUVRIR */
+
+.films {
+    padding: 30px 6% 50px;
+}
+
+/* TITRE DE LA SELECTION */
+
+.titre-films {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.titre-films h2 {
+    font-size: 28px;
+    font-weight: 500;
+    margin: 0;
+    color: white;
+}
+
+/* FLECHES */
+
+.fleches {
+    display: flex;
+    gap: 10px;
+}
+
+.fleches button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background-color: #5e250c;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.fleches button:hover {
+    background-color: #af5d2e;
+}
+
+/* LISTE DES FILMS */
+
+.liste-films {
+    display: flex;
+    gap: 22px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 10px 0 20px;
+    cursor: grab;
+    user-select: none;
+}
+
+.liste-films::-webkit-scrollbar {
+    display: none;
+}
+
+.liste-films.glissement {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+/* CARTES DES FILMS */
+
+.carte-film {
+    position: relative;
+    flex: 0 0 29%;
+    height: 510px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #2f150a;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s;
+}
+
+.carte-film:hover {
+    transform: scale(1.02);
+}
+
+/* IMAGES DES FILMS */
+
+.carte-film img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+/* TITRE LES AFFICHES */
+
+.overlay-film {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 75px 20px 20px;
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.45),
+        transparent
+    );
+    pointer-events: none;
+}
+
+.overlay-film h3 {
+    font-size: 21px;
+    margin: 0 0 8px;
+    color: white;
+}
+
+.overlay-film p {
+    font-size: 14px;
+    color: #e2c8b8;
+    margin: 0;
+}
+
+/* PRESENTATION */
+
+.section {
+    max-width: 1000px;
+    margin: 50px auto 80px;
+    padding: 45px;
+    background-color: #2f150a;
+    border: 1px solid #64463a;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.section h2 {
+    color: white;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.section p {
+    line-height: 1.8;
+    color: #ead8cd;
+}
+
+
+/* BOUTONS */
+
+.bouton {
+    display: inline-block;
+    background-color: #af5d2e;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.bouton:hover {
+    background-color: #c87443;
+    color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color:  #1b0c02;
+    color: #e2c8b8;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+
+/* ADAPTATION MOBILE */
+
+@media (max-width: 900px) {
+
+    .hero-slide img {
+        height: 430px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 20px 4%;
+    }
+
+    .hero-slide {
+        border-radius: 18px;
+    }
+
+    .hero-slide img {
+        height: 350px;
+    }
+
+    .hero-overlay {
+        padding: 25px;
+    }
+
+    .hero-overlay h1 {
+        font-size: 30px;
+    }
+
+    .hero-overlay p {
+        font-size: 13px;
+    }
+
+    .hero-overlay .hero-infos {
+        font-size: 12px;
+    }
+
+    .films {
+        padding-left: 5%;
+    }
+
+    .titre-films {
+        padding-right: 5%;
+    }
+
+    .titre-films h2 {
+        font-size: 22px;
+    }
+
+    .carte-film {
+        flex-basis: 250px;
+        height: 380px;
+    }
+
+    .overlay-film h3 {
+        font-size: 18px;
+    }
+
+    .overlay-film p {
+        font-size: 13px;
+    }
+
+    .section {
+        margin: 20px;
+        padding: 25px;
+    }
+}
+
+/* PAGE FILMS */
+
+.page-films {
+    padding: 40px 5%;
+    min-height: 80vh;
+}
+
+/* TITRE ET DESCRIPTION */
+
+.page-films h1 {
+    text-align: left;
+    font-size: 45px;
+    color: white;
+    margin: 20px 0;
+}
+
+.text {
+    text-align: left;
+    font-size: 16px;
+    color: #e2c8b8;
+    margin-bottom: 30px;
+}
+
+/* BARRE DE RECHERCHE */
+
+#search-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #2f150a;
+    border: 1px solid #64463a;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px 0;
+}
+
+#search-bar {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #180801;
+    color: white;
+    border: 1px solid #64463a;
+    border-radius: 10px;
+}
+
+#search-bar:focus {
+    outline: none;
+    border-color: #af5d2e;
+}
+
+#search-button {
+    padding: 15px 25px;
+    background-color: #af5d2e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #c87443;
+}
+
+
+/* CONNEXION TMDB */
+
+#connexion-films {
+    background-color: #2f150a;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 25px 0;
+}
+
+#connexion-films[hidden] {
+    display: none;
+}
+
+#connexion-films p {
+    color: #e2c8b8;
+    margin-top: 0;
+}
+
+#cle-api {
+    width: 60%;
+    max-width: 450px;
+    padding: 12px;
+    background-color: #180801;
+    color: white;
+    border: 1px solid #64463a;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#bouton-connexion {
+    padding: 12px 20px;
+    background-color: #af5d2e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+#bouton-connexion:hover {
+    background-color: #c87443;
+}
+
+
+/* CATALOGUE */
+
+.page-films h2 {
+    text-align: left;
+    color: white;
+    font-size: 28px;
+    margin: 50px 0 15px;
+}
+
+#message-films {
+    text-align: left;
+    color: #e2c8b8;
+    margin-bottom: 20px;
+}
+
+
+/* LISTE DES FILMS */
+
+#film-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+
+/* CARTE FILM */
+
+.film-poster {
+    background-color: #2f150a;
+    border: 1px solid #64463a;
+    border-radius: 8px;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.film-poster:hover {
+    transform: translateY(-5px);
+}
+
+
+/* IMAGE DU FILM */
+
+.film-poster img {
+    width: 100%;
+    aspect-ratio: 2 / 3;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* INFORMATIONS DES FILMS */
+
+.film-item {
+    padding: 15px;
+    text-align: center;
+}
+
+.film-item h3 {
+    color: white;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.film-item p {
+    color: #e2c8b8;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.film-item .note {
+    color: #e5aa78;
+    font-weight: bold;
+}
+
+
+/* VERSION TABLETTE */
+
+@media (max-width: 900px) {
+
+    #film-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-films h1 {
+        font-size: 35px;
+    }
+}
+
+
+/* VERSION TELEPHONE */
+
+@media (max-width: 500px) {
+
+    .page-films {
+        padding: 25px 5%;
+    }
+
+    .page-films h1 {
+        font-size: 30px;
+    }
+
+    #search-container {
+        flex-direction: column;
+    }
+
+    #search-bar {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    #search-button {
+        width: 100%;
+    }
+
+    #cle-api {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+    }
+
+    #film-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* PAGE A PROPOS */
+
+.page-apropos {
+    min-height: 850px;
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(24, 8, 1, 0.85),
+            rgba(24, 8, 1, 0.20),
+            rgba(24, 8, 1, 0.75)
+        ),
+        url("Images/psycho.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 60px 6%;
+}
+
+
+/* PRESENTATION */
+
+.presentation-apropos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.texte-apropos {
+    max-width: 520px;
+}
+
+.petit-titre-apropos {
+    color: #e5aa78;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.texte-apropos h1 {
+    color: white;
+    font-size: 55px;
+    margin: 15px 0 25px;
+}
+
+.texte-apropos p {
+    color: #f1e3d8;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* CARTES A DROITE */
+
+.cartes-apropos {
+    width: 380px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carte-apropos {
+    background-color: rgba(48, 15, 2, 0.85);
+    border: 1px solid #64463a;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.carte-apropos h2 {
+    color: white;
+    font-size: 20px;
+    margin: 0 0 15px;
+}
+
+.carte-apropos p {
+    color: #e2c8b8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* LOGOS DES LANGAGES */
+
+.technos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    text-align: center;
+    padding: 12px 5px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+}
+
+.tech-item img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.tech-item p {
+    color: white;
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* VERSION TABLETTE */
+
+@media (max-width: 900px) {
+
+    .presentation-apropos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .texte-apropos {
+        max-width: 100%;
+    }
+
+    .cartes-apropos {
+        width: 100%;
+    }
+}
+
+
+/* VERSION TELEPHONE */
+
+@media (max-width: 600px) {
+
+    .page-apropos {
+        min-height: 100vh;
+        padding: 40px 5%;
+    }
+
+    .texte-apropos h1 {
+        font-size: 35px;
+    }
+
+    .carte-apropos {
+        padding: 20px;
+    }
+
+    .technos {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .tech-item img {
+        width: 38px;
+        height: 38px;
+    }
+}
