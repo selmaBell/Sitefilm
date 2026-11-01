@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CinéFilm - Accueil</title>
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav class="navbar">
+           <h2 class="logo">CINÉFILM</h2>
+ <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="film.html">Films</a></li>
+    <li><a href="Decouvrir.html">Découvrir</a></li>
+    <li><a href="a-propos.html">À propos</a></li>
+</ul>
+
+    </nav>
+    </header>
+    <main>
+
+        <!-- GRANDES BANNIERES -->
+        <section class="hero">
+
+   <div class="hero-slider">
+
+    <article class="hero-slide active">
+        <img src="Images/Breaking bad.jpeg" alt="Bannière Breaking Bad">
+        <div class="hero-overlay">
+            <h1>BREAKING BAD</h1>
+            <a href="film.html" class="bouton">Découvrir</a>
+        </div>
+    </article>
+
+    <article class="hero-slide">
+        <img src="Images/Joker.jpeg" alt="Bannière JOKER">
+        <div class="hero-overlay">
+            <h1>JOKER</h1>
+            <a href="film.html" class="bouton">Découvrir</a>
+        </div>
+    </article>
+
+    <article class="hero-slide">
+        <img src="Images/TX.jpeg" alt="Bannière Taxi driver">
+        <div class="hero-overlay">
+            <h1>TAXI DRIVER</h1>
+            <a href="film.html" class="bouton">Découvrir</a>
+        </div>
+    </article>
+
+</div>
+            <div class="hero-navigation">
+                <button id="hero-precedent" type="button" aria-label="Bannière précédente">&#10094;</button>
+
+                <div class="hero-points">
+                    <span class="point active"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+
+                <button id="hero-suivant" type="button" aria-label="Bannière suivante">&#10095;</button>
+            </div>
+
+        </section>
+
+
+        <!-- FILMS A DECOUVRIR -->
+        <section class="films">
+
+            <div class="titre-films">
+              <h2>Notre sélection pour vous</h2>
+
+            <div class="fleches">
+            </div>
+            </div>
+
+            <div class="liste-films" id="liste-films">
+                 <article class="carte-film">
+                    <img src="Images/Pirates of the Caribbean.jpeg" alt="Affiche Pirates des Caraïbes" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Pirates des Caraïbes</h3>
+                    </div>
+                </article>
+
+                 <article class="carte-film">
+                    <img src="Images/The-last-of-us.jpeg" alt="Affiche The Last of Us" draggable="false">
+                    <div class="overlay-film">
+                        <h3>The Last of Us</h3>
+                    </div>
+                </article>
+
+                <article class="carte-film">
+                    <img src="Images/Interstellar.jpeg" alt="Affiche Interstellar" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Interstellar</h3>
+                    </div>
+                </article>
+
+                   <article class="carte-film">
+                    <img src="Images/Starwars.jpeg" alt="Star Wars" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Star Wars</h3>
+                    </div>
+                </article>
+
+
+                <article class="carte-film">
+                    <img src="Images/Harrypotter.jpeg" alt="Harry Potter" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Harry Potter</h3>
+                    </div>
+                </article>
+
+ </div>
+</section>
+
+ <!-- DEUXIEME PARTIE -->
+        <section class="films">
+
+            <div class="titre-films">
+                <h2>Films les plus populaires</h2>
+            </div>
+
+            <div class="liste-films" id="liste-films-2">
+
+                  <article class="carte-film">
+                    <img src="Images/Figh club.jpeg" alt="Affiche Fight Club" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Fight Club</h3>
+                    </div>
+                </article>
+
+
+                  <article class="carte-film">
+                    <img src="Images/Seven.jpeg" alt="Affiche Seven" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Seven</h3>
+                    </div>
+                </article>
+
+                       <article class="carte-film">
+                    <img src="Images/Shutter Island poster.jpeg" alt="Affiche Shutter Island" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Shutter Island</h3>
+                    </div>
+                </article>
+
+                <article class="carte-film">
+                    <img src="Images/Pulp Fiction.jpeg" alt="Affiche Pulp Fiction" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Pulp Fiction</h3>
+                    </div>
+                </article>
+
+                 <article class="carte-film">
+                    <img src="Images/Le parrain.jpeg" alt="Le parrain" draggable="false">
+                    <div class="overlay-film">
+                        <h3>Le parrain II</h3>
+                    </div>
+                </article> 
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 - CinéFilm | Selma Belladjou</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
