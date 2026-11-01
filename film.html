@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CinéFilm - Films</title>
+
+    <!-- Police -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav class="navbar">
+
+            <h2 class="logo">CINÉFILM</h2>
+
+            <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="film.html">Films</a></li>
+    <li><a href="Decouvrir.html">Découvrir</a></li>
+    <li><a href="a-propos.html">À propos</a></li>
+</ul>
+
+        </nav>
+    </header>
+
+    <main class="page-films">
+
+        <h1>Découvrez notre catalogue</h1>
+
+        <p class="text"> Découvrez vos films préférés et recherchez ceux qui vous intéressent. </p>
+
+        <!-- BARRE DE RECHERCHE -->
+        <div id="search-container">
+            <input type="search" id="search-bar"
+                   placeholder="Rechercher un film...">
+            <button id="search-button" type="button">
+                Rechercher
+            </button>
+
+        </div>
+
+  
+<!-- FILTRES DES FILMS -->
+<div class="filtres-films">
+
+    <!-- FILTRE PAR GENRE -->
+    <select id="filtre-genre">
+        <option value="">Genres</option>
+        <option value="28">Action</option>
+        <option value="35">Comédie</option>
+        <option value="18">Drame</option>
+        <option value="27">Horreur</option>
+        <option value="10749">Romance</option>
+        <option value="878">Science-fiction</option>
+        <option value="53">Thriller</option>
+    </select>
+
+    <!-- FILTRE PAR DUREE -->
+    <select id="filtre-duree">
+        <option value="">Durées</option>
+        <option value="90">Moins de 1h30</option>
+        <option value="150">1h30 à 2h30</option>
+        <option value="180">2h30 à 3h</option>
+        <option value="181">Plus de 3h</option>
+    </select>
+
+</div>
+
+
+        <!-- LISTE DES FILMS -->
+
+    <p id="message-films"></p>
+      <div id="film-list"></div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 - CinéFilm | Selma Belladjou</p>
+        <p>Données fournies par TMDB.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="films.js"></script>
+
+</body>
+</html>
