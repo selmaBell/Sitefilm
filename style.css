@@ -1290,9 +1290,9 @@ main {
 /* INTRODUCTION */
 
 .intro-experience {
-    text-align: center;
-    margin: 70px auto 40px;
-    padding: 0 20px;
+    text-align: left;
+    margin: 70px 6% 40px;
+    padding: 0;
 }
 
 .intro-experience h1 {
